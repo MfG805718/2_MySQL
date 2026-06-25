@@ -1,0 +1,6 @@
+.DS_Store
+
+# Local MySQL installation packages and runtime data.
+mysql-*.tar
+mysql-*/
+
