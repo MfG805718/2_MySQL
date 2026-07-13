@@ -1,6 +1,9 @@
 # 2_MySQL
 
-这是一个 MySQL 学习与实战练习仓库，目前核心内容是 `shop_demo_7day`：一套围绕电商订单、商品、库存、支付和日志场景设计的 7 天 SQL 练习项目。
+这是一个 MySQL 学习与实战练习仓库，目前包含两套练习：
+
+- `shop_demo_7day`：围绕电商订单、商品、库存、支付和日志场景设计的 7 天 SQL 练习项目。
+- `ops_demo_week2`：围绕项目最基础但最常用的增改删查、备份、还原、清库设计的新一周练习。
 
 项目目标是通过一个小型但完整的业务数据库，练习从建表、查询、JOIN、业务报表，到索引分析、事务一致性和项目交接排查的常见 MySQL 能力。
 
@@ -19,7 +22,33 @@ shop_demo_7day/
     ├── day05_indexes_explain.sql
     ├── day06_transactions_consistency.sql
     └── day07_project_handover.sql
+
+ops_demo_week2/
+├── README.md
+├── sql/
+│   ├── day01_schema_seed.sql
+│   ├── day02_insert_select.sql
+│   ├── day03_update_delete.sql
+│   ├── day04_project_crud_flows.sql
+│   ├── day05_backup_check.sql
+│   ├── day06_restore_check.sql
+│   └── day07_cleanup.sql
+└── terminal/
+    ├── day05_backup_commands.md
+    └── day06_restore_commands.md
 ```
+
+## 新一周：CRUD、备份还原、清库
+
+`ops_demo_week2` 更贴近日常项目维护动作，使用 `ops_demo` 练习库，重点不是复杂报表，而是把基础操作练熟：
+
+- 新增客户、工单、评论：`INSERT`
+- 查询列表页、详情页、状态统计：`SELECT`
+- 修改联系方式、分配处理人、更新工单状态：`UPDATE`
+- 删除误写评论、理解外键限制和软删除：`DELETE`
+- 使用 `mysqldump` 做全库、结构、数据、单表备份
+- 把备份恢复到原库或新库并检查行数
+- 按外键依赖顺序清表，理解 `DELETE`、`TRUNCATE`、`DROP DATABASE` 的差别
 
 ## 练习主题
 
